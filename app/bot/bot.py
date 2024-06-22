@@ -44,7 +44,6 @@ async def restore_scheduled_jobs(
 #     ]
 
 async def main(settings: Settings) -> None:
-    print("PENIS")
     await db.main(settings=settings)
 
     dp = Dispatcher()
