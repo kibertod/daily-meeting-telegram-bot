@@ -22,3 +22,4 @@ day_of_week = "0-4"
 day_of_week_pretty = "Monday - Friday"
 
 sample_time = "2024-06-03T14:00:00+03:00"
+

@@ -10,9 +10,9 @@ RUN --mount=type=cache,target=/root/.cache \
 
 RUN poetry install --without dev
 
-COPY bot bot
+COPY app app
 COPY locales locales
 
 ENV PYTHONUNBUFFERED=1
 
-CMD ["/bin/bash", "-c", "poetry run bot start"]
+CMD ["/bin/bash", "-c", "poetry run bot start & poetry run server start"]

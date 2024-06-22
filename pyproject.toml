@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "bot"
-version = "0.1.0"
+name = "app"
+version = "0.1.1"
 description = ""
 authors = ["Your Name <you@example.com>"]
 license = "mit"
@@ -16,6 +16,9 @@ beanie = "^1.26.0"
 pydantic-settings = "^2.2.1"
 pytz = "^2024.1"
 babel = "^2.15.0"
+fastapi = "^0.111.0"
+uvicorn = "^0.30.1"
+jinja2 = "3.1.4"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.4.2"
@@ -24,8 +27,8 @@ pylint = "^3.1.0"
 babel = "^2.15.0"
 
 [tool.poetry.scripts]
-bot = "bot.main:main"
-
+bot = "app.bot.main:main"
+server = "app.web.server:main"
 
 [build-system]
 requires = ["poetry-core"]

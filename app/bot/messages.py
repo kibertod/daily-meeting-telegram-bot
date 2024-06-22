@@ -44,7 +44,7 @@ def make_help_message() -> str:
     ).strip()
 
 
-def make_daily_messages(username: str) -> [str]:
+def make_daily_messages(username: str) -> list[str]:
     return [
         _("@{username}, what did you do last working day?").format(username=username),
         _("@{username}, what will you do today?").format(username=username),

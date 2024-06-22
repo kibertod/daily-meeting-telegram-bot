@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-03 13:20+0300\n"
+"POT-Creation-Date: 2024-06-22 02:04+0300\n"
 "PO-Revision-Date: 2024-05-11 19:50+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -19,126 +19,142 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: bot/commands.py:64
+#: app/bot/commands.py:64
 #, fuzzy
 msgid "Enable me."
 msgstr "включи меня"
 
-#: bot/commands.py:65
+#: app/bot/commands.py:65
 #, fuzzy
 msgid "Get a help message."
 msgstr "получи это сообщение"
 
-#: bot/commands.py:66
+#: app/bot/commands.py:66
 #, fuzzy
 msgid "Disable me."
 msgstr "включи меня"
 
-#: bot/commands.py:67
+#: app/bot/commands.py:67
 msgid "Cancel the current operation with the bot."
 msgstr ""
 
-#: bot/commands.py:69
+#: app/bot/commands.py:69
 #, fuzzy
 msgid "Set up regular meetings."
 msgstr "установи время и дату начала дейли"
 
-#: bot/commands.py:71
+#: app/bot/commands.py:71
 #, fuzzy
 msgid "Set meetings time zone."
 msgstr "установи время и дату начала дейли"
 
-#: bot/commands.py:72
+#: app/bot/commands.py:72
 #, fuzzy
 msgid "Set meetings time."
 msgstr "установи время и дату начала дейли"
 
-#: bot/commands.py:73
+#: app/bot/commands.py:73
 #, fuzzy
 msgid "Set meetings days."
 msgstr "установи время и дату начала дейли"
 
-#: bot/commands.py:75
+#: app/bot/commands.py:75
 #, fuzzy
 msgid "Join meetings."
 msgstr "установи время и дату начала дейли"
 
-#: bot/commands.py:76
+#: app/bot/commands.py:76
 #, fuzzy
 msgid "Skip meetings."
 msgstr "установи время и дату начала дейли"
 
-#: bot/commands.py:77
+#: app/bot/commands.py:77
 msgid "Set the days when you can join meetings."
 msgstr ""
 
-#: bot/commands.py:78
+#: app/bot/commands.py:78
 #, fuzzy
 msgid "Join only today's meeting."
 msgstr "установи время и дату начала дейли"
 
-#: bot/commands.py:79
+#: app/bot/commands.py:79
 msgid "Skip only today's meeting."
 msgstr ""
 
-#: bot/commands.py:80
+#: app/bot/commands.py:80
 msgid "Schedule a personal vacation."
 msgstr ""
 
-#: bot/commands.py:81
+#: app/bot/commands.py:81
 msgid "Unschedule the personal vacation."
 msgstr ""
 
-#: bot/commands.py:83
+#: app/bot/commands.py:83
 msgid "Get the chat state that I store."
 msgstr ""
 
-#: bot/handlers.py:82
+#: app/bot/handlers.py:82
+#, fuzzy
 msgid ""
-"OK, we'll meet at {meeting_time} on {week_days} starting not earlier than"
-" on {start_date}!"
+"OK, we'll meet at {meeting_time} on {week_days} starting than on "
+"{start_date}!"
 msgstr ""
 "ОК, встретимся в {meeting_time} в(о) {week_days}, начиная не раньше чем "
 "{start_date}!"
 
-#: bot/handlers.py:93
+#: app/bot/handlers.py:93
 msgid ""
 "\n"
-"                        Please write the meeting time in the {iso8601} "
+"                        Please write the meetings time in the {iso8601} "
 "format with an offset relative to the UTC time zone.\n"
+"                        \n"
 "                        You can calculate the time on the site "
 "{time_url}.\n"
+"                        \n"
 "                        Example:\n"
+"                        \n"
 "                        /{set_meetings_time} {sample_time}\n"
 "                        "
 msgstr ""
 
-#: bot/handlers.py:119
+#: app/bot/handlers.py:122
 msgid "You've already joined, @{username}!"
 msgstr "Ты уже подписался(лась), @{username}!"
 
-#: bot/handlers.py:126
+#: app/bot/handlers.py:129
 msgid ""
 "\n"
 "                        You've just joined, @{username}!\n"
+"                        \n"
 "                        You can skip meetings via the /{command_skip} "
 "command.\n"
 "                        "
 msgstr ""
 
-#: bot/handlers.py:146
+#: app/bot/handlers.py:150
 msgid ""
 "\n"
 "                        See you later, @{username}!\n"
+"                        \n"
 "                        You can join via the /{command_join} command.\n"
 "                        "
 msgstr ""
 
-#: bot/handlers.py:157
-msgid "You've not joined anyway, @{username}!"
+#: app/bot/handlers.py:162
+#, fuzzy
+msgid "You've not yet joined, @{username}!"
 msgstr "Ты и так подписан(а), @{username}!"
 
-#: bot/messages.py:13
+#: app/bot/meeting.py:14
+#, fuzzy
+msgid "Meeting time!"
+msgstr "установи время и дату начала дейли"
+
+#: app/bot/meeting.py:16
+msgid "Nobody has joined the meeting!"
+msgstr ""
+
+#: app/bot/messages.py:13
 #, fuzzy
 msgid ""
 "\n"
@@ -153,20 +169,356 @@ msgstr ""
 "        Ты можешь управлять мной при помощи следующих команд:\n"
 "        "
 
-#: bot/messages.py:49
+#: app/bot/messages.py:30
+msgid "Global commands"
+msgstr ""
+
+#: app/bot/messages.py:34
+msgid "Team settings commands"
+msgstr ""
+
+#: app/bot/messages.py:37
+msgid "Personal settings commands"
+msgstr ""
+
+#: app/bot/messages.py:41
+msgid "Chat information commands"
+msgstr ""
+
+#: app/bot/messages.py:49
 #, fuzzy
 msgid "@{username}, what did you do last working day?"
 msgstr "@{username}, что ты делал(а) вчера?"
 
-#: bot/messages.py:50
+#: app/bot/messages.py:50
 #, fuzzy
 msgid "@{username}, what will you do today?"
 msgstr "@{username}, что будешь делать сегодня?"
 
-#: bot/messages.py:51
+#: app/bot/messages.py:51
 #, fuzzy
 msgid "@{username}, what (if anything) is blocking your progress?"
 msgstr "@{username}, что (если такое есть) блокирует твой прогресс?"
+
+#: env/lib/python3.12/site-packages/click/_termui_impl.py:518
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/_termui_impl.py:522
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/core.py:1120
+#: env/lib/python3.12/site-packages/typer/core.py:244
+msgid "Aborted!"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/core.py:1309
+#: env/lib/python3.12/site-packages/click/decorators.py:559
+msgid "Show this message and exit."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/core.py:1340
+#: env/lib/python3.12/site-packages/click/core.py:1370
+msgid "(Deprecated) {text}"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/core.py:1387
+#: env/lib/python3.12/site-packages/typer/core.py:575
+#: env/lib/python3.12/site-packages/typer/rich_utils.py:91
+msgid "Options"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/core.py:1415
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: env/lib/python3.12/site-packages/click/core.py:1428
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/core.py:1636
+#: env/lib/python3.12/site-packages/typer/rich_utils.py:92
+msgid "Commands"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/core.py:1668
+msgid "Missing command."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/core.py:1746
+msgid "No such command {name!r}."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/core.py:2310
+msgid "Value must be an iterable."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/core.py:2333
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: env/lib/python3.12/site-packages/click/core.py:2778
+#: env/lib/python3.12/site-packages/typer/core.py:519
+msgid "env var: {var}"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/core.py:2808
+#: env/lib/python3.12/site-packages/typer/core.py:116
+msgid "(dynamic)"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/core.py:2821
+#: env/lib/python3.12/site-packages/typer/core.py:359
+#: env/lib/python3.12/site-packages/typer/core.py:540
+msgid "default: {default}"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/core.py:2834
+#: env/lib/python3.12/site-packages/typer/core.py:361
+#: env/lib/python3.12/site-packages/typer/core.py:549
+msgid "required"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/decorators.py:528
+msgid "Show the version and exit."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/exceptions.py:44
+#: env/lib/python3.12/site-packages/click/exceptions.py:80
+msgid "Error: {message}"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/exceptions.py:72
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/exceptions.py:121
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/exceptions.py:123
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/exceptions.py:179
+msgid "Missing argument"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/exceptions.py:181
+msgid "Missing option"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/exceptions.py:183
+msgid "Missing parameter"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/exceptions.py:185
+msgid "Missing {param_type}"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/exceptions.py:192
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/exceptions.py:212
+msgid "No such option: {name}"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/exceptions.py:226
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: env/lib/python3.12/site-packages/click/exceptions.py:262
+msgid "unknown error"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/exceptions.py:269
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/formatting.py:156
+msgid "Usage:"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/parser.py:231
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/parser.py:413
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/parser.py:473
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: env/lib/python3.12/site-packages/click/shell_completion.py:318
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/shell_completion.py:326
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/termui.py:158
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/termui.py:174
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/termui.py:176
+msgid "Error: {e.message}"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/termui.py:187
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/termui.py:243
+msgid "Error: invalid input"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/termui.py:773
+msgid "Press any key to continue..."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:266
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:300
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: env/lib/python3.12/site-packages/click/types.py:394
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: env/lib/python3.12/site-packages/click/types.py:414
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:470
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:611
+msgid "{value!r} is not a valid boolean."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:635
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:822
+msgid "file"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:824
+msgid "directory"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:826
+msgid "path"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:877
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:886
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:894
+msgid "{name} '{filename}' is a directory."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:903
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:912
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:921
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: env/lib/python3.12/site-packages/click/types.py:987
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: env/lib/python3.12/site-packages/dataclass_wizard/wizard_cli/cli.py:123
+#, python-format
+msgid "argument \"-\" with mode %r"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/dataclass_wizard/wizard_cli/cli.py:135
+#, python-format
+msgid "can't open '%s': %s"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/typer/core.py:572
+#: env/lib/python3.12/site-packages/typer/rich_utils.py:90
+msgid "Arguments"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/typer/rich_utils.py:84
+msgid "(deprecated) "
+msgstr ""
+
+#: env/lib/python3.12/site-packages/typer/rich_utils.py:85
+msgid "[default: {}]"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/typer/rich_utils.py:86
+msgid "[env var: {}]"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/typer/rich_utils.py:88
+msgid "[required]"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/typer/rich_utils.py:93
+msgid "Error"
+msgstr ""
+
+#: env/lib/python3.12/site-packages/typer/rich_utils.py:94
+msgid "Aborted."
+msgstr ""
 
 #~ msgid "subscribe so that I send you messages"
 #~ msgstr "подпишись, чтобы я отправлял тебе сообщения"
@@ -282,6 +634,34 @@ msgstr "@{username}, что (если такое есть) блокирует т
 #~ " time on the site {time_url}.\n"
 #~ "                        Example:\n"
 #~ "                        {set_meetings_time} {sample_time}\n"
+#~ "                        "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "                        Please write the "
+#~ "meeting time in the {iso8601} format "
+#~ "with an offset relative to the UTC"
+#~ " time zone.\n"
+#~ "                        You can calculate the"
+#~ " time on the site {time_url}.\n"
+#~ "                        Example:\n"
+#~ "                        /{set_meetings_time} {sample_time}\n"
+#~ "                        "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "                        You've just joined, @{username}!\n"
+#~ "                        You can skip meetings"
+#~ " via the /{command_skip} command.\n"
+#~ "                        "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "                        See you later, @{username}!\n"
+#~ "                        You can join via the /{command_join} command.\n"
 #~ "                        "
 #~ msgstr ""
 
