@@ -23,5 +23,5 @@ class HasMessageUserUsername(Filter):
 
 class HasChatState(Filter):
     async def __call__(self, message: Message):
-        chat_state = await load_state(message.chat.id)
+        chat_state = await load_state(message.chat.id, message.message_thread_id)
         return {"chat_state": chat_state}

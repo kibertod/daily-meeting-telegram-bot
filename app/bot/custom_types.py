@@ -7,7 +7,7 @@ from .chat import ChatId
 
 
 class SendMessage(Protocol):
-    async def __call__(self, chat_id: ChatId, message: str) -> Message: ...
+    async def __call__(self, chat_id: ChatId, message_thread_id: int | None,message: str) -> Message: ...
 
 
 class SaveState(Protocol):
@@ -15,8 +15,8 @@ class SaveState(Protocol):
 
 
 class LoadState(Protocol):
-    async def __call__(self, chat_id: ChatId) -> ChatState: ...
+    async def __call__(self, chat_id: ChatId, message_thread_id: int) -> ChatState: ...
 
 
 class CreateState(Protocol):
-    async def __call__(self, chat_id: ChatId) -> None: ...
+    async def __call__(self, chat_id: ChatId, message_thread_id: int) -> None: ...

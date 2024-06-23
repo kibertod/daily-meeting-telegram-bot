@@ -33,6 +33,7 @@ async def restore_scheduled_jobs(
             schedule_meeting(
                 meeting_time=chat_state.meeting_time,
                 chat_id=chat_state.chat_id,
+                message_thread_id=chat_state.message_thread_id,
                 scheduler=scheduler,
                 send_message=send_message,
             )
@@ -57,8 +58,8 @@ async def main(settings: Settings) -> None:
         default=DefaultBotProperties(parse_mode=ParseMode.HTML),
     )
 
-    async def send_message(chat_id: ChatId, message: str):
-        return await bot.send_message(chat_id=chat_id, text=message)
+    async def send_message(chat_id: ChatId, message_thread_id:int | None, message: str):
+        return await bot.send_message(chat_id=chat_id, message_thread_id=message_thread_id, text=message)
 
     scheduler = init_scheduler(settings=settings)
     await restore_scheduled_jobs(scheduler=scheduler, send_message=send_message)
